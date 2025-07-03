@@ -64,12 +64,12 @@ Para construir e executar a aplicação em um ambiente containerizado, siga os p
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/SistemaGerenciamentoProjetos-AspNetCore.git](https://github.com/seu-usuario/SistemaGerenciamentoProjetos-AspNetCore.git)
+    git clone [https://github.com/seu-usuario/ASPNetGerenciadorProjetos.git](https://github.com/seu-usuario/ASPNetGerenciadorProjetos.git)
     ```
 
 2.  **Navegue até o diretório do projeto:**
     ```bash
-    cd SistemaGerenciamentoProjetos-AspNetCore
+    cd ASPNetGerenciadorProjetos
     ```
 
 3.  **Construa a imagem Docker:**

@@ -1,7 +1,7 @@
 # Sistema de Gerenciamento de Projetos e Tarefas
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
-
+![alt text](https://github.com/luiz-bcardoso/ASPNetGerenciadorProjetos/blob/master/ASPNetGerenciadorProjetos/wwwroot/image.png?raw=true)
 Aplicação web desenvolvida como trabalho final de disciplina, utilizando **ASP.NET Core MVC** e **Entity Framework Core**. O sistema permite o controle completo de Projetos e suas respectivas Tarefas, demonstrando a aplicação prática dos conceitos de desenvolvimento web com a stack .NET.
 
 ## Descrição do Projeto

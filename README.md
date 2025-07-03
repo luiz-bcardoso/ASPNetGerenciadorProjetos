@@ -100,11 +100,7 @@ O código-fonte está organizado seguindo o padrão **ASP.NET Core MVC**:
 * `Dockerfile`: Arquivo de configuração para a containerização da aplicação.
 
 ---
----
-
-## (English Summary for Portfolio)
-
-## Project and Task Management System
+## 🇺🇸 Project and Task Management System
 
 ### About The Project
 

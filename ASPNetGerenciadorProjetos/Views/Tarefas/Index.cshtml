@@ -1,53 +1,61 @@
 ﻿@model IEnumerable<ASPNetGerenciadorProjetos.Models.Tarefa>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tarefas";
 }
 
-<h1>Index</h1>
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2 class="mb-0 text-primary">Tarefas Cadastradas</h2>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Nova Tarefa
+            </a>
+        </div>
+    </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Projeto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Projeto.Cliente)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TarefaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TarefaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TarefaId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().Titulo)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Descricao)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Status)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Projeto)</th>
+                    <th class="text-end">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">Nenhuma tarefa cadastrada.</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Titulo</td>
+                            <td>@item.Descricao</td>
+                            <td>@item.Status</td>
+                            <td>@item.Projeto?.Cliente</td>
+                            <td class="text-end">
+                                <a asp-action="Details" asp-route-id="@item.TarefaId" class="btn btn-outline-primary btn-sm me-1" title="Detalhes">
+                                    <i class="bi bi-search"></i>
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.TarefaId" class="btn btn-outline-warning btn-sm me-1" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.TarefaId" class="btn btn-outline-danger btn-sm" title="Excluir">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

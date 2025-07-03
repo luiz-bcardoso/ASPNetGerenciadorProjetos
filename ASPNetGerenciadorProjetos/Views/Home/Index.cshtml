@@ -1,8 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <h2 class="mb-3 text-primary">Sistema de Controle de Projetos e Tarefas</h2>
+                    <p class="lead mb-4">
+                        Este sistema foi desenvolvido utilizando <strong>ASP.NET Core MVC</strong> e <strong>Entity Framework Core</strong>, aplicando as melhores práticas de organização de código e navegação.
+                    </p>
+                    <ul class="list-group list-group-flush text-start mb-4">
+                        <li class="list-group-item">✔ Estruturação no padrão MVC</li>
+                        <li class="list-group-item">✔ Persistência de dados com Entity Framework Core</li>
+                        <li class="list-group-item">✔ Relacionamento 1:N entre Projetos e Tarefas</li>
+                        <li class="list-group-item">✔ Cadastro, edição, listagem e exclusão de Projetos e Tarefas</li>
+                        <li class="list-group-item">✔ Visualização das Tarefas associadas a cada Projeto</li>
+                        <li class="list-group-item">✔ Navegação clara e intuitiva entre as telas</li>
+                    </ul>
+                    <a href="@Url.Action("Index", "Projetos")" class="btn btn-primary btn-lg mt-2">
+                        Acessar Projetos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

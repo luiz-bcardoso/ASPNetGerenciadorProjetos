@@ -1,4 +1,11 @@
+using ASPNetGerenciadorProjetos.DAL;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar o DBContext (Contexto) para o SQLite
+builder.Services.AddDbContext<Contexto>(optionsAction =>
+    optionsAction.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

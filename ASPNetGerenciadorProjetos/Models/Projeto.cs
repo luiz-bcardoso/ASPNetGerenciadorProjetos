@@ -7,7 +7,6 @@ namespace ASPNetGerenciadorProjetos.Models
     public class Projeto
     {
         [Key]
-        [Display(Name = "ID")]
         public int ProjetoID { get; set; }
 
         [Required(ErrorMessage = "O nome do projeto é obrigatório.")]
@@ -31,6 +30,6 @@ namespace ASPNetGerenciadorProjetos.Models
 
         // Propriedade de navegação para o relacionamento 1:N
         // Um projeto pode ter várias tarefas.
-        public ICollection<Tarefa> Tarefas { get; set; }
+        public ICollection<Tarefa>? Tarefas { get; set; }
     }
 }

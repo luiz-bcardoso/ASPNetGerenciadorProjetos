@@ -3,18 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASPNetGerenciadorProjetos.Models
 {
-    public enum StatusTarefa
-    {
-        [Display(Name = "Pendente")] // Visualização amigável para o status.
-        Pendente, // Valor para ser salvo no banco. 
-
-        [Display(Name = "Em Andamento")]
-        EmAndamento,
-
-        [Display(Name = "Concluída")]
-        Concluida
-    }
-
     [Table("Tarefas")]
     public class Tarefa
     {
@@ -33,15 +21,15 @@ namespace ASPNetGerenciadorProjetos.Models
 
         [Required(ErrorMessage = "O status da tarefa é obrigatório.")]
         [Display(Name = "Status")]
-        public StatusTarefa Status { get; set; }
+        public string Status { get; set; }
 
         // Foreing Key para o relacionamento com Projeto
         [Required(ErrorMessage = "O projeto associado é obrigatório.")]
         [Display(Name = "Projeto")]
+        [ForeignKey("ProjetoId")]
         public int ProjetoId { get; set; }
 
         // Propriedade de navegação para o relacionamento com Projeto
-        [ForeignKey("ProjetoId")]
         public Projeto? Projeto { get; set; }
 
     }

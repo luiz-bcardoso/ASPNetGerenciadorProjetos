@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNetGerenciadorProjetos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20250703170310_InitialCreate")]
+    [Migration("20250703201526_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -60,8 +60,9 @@ namespace ASPNetGerenciadorProjetos.Migrations
                     b.Property<int>("ProjetoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

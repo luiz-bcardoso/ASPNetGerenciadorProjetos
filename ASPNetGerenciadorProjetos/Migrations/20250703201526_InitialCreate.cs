@@ -35,7 +35,7 @@ namespace ASPNetGerenciadorProjetos.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Titulo = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: false),
-                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Status = table.Column<string>(type: "TEXT", nullable: false),
                     ProjetoId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

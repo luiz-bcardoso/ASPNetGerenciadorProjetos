@@ -64,7 +64,7 @@ Para construir e executar a aplicação em um ambiente containerizado, siga os p
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/ASPNetGerenciadorProjetos.git](https://github.com/seu-usuario/ASPNetGerenciadorProjetos.git)
+    git clone https://github.com/luiz-bcardoso/ASPNetGerenciadorProjetos.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
